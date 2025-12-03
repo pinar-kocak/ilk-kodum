@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript örnek</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <button id="btn">Tıkla!</button>
+
+    <p id="test"></p>
+    
+    <div id="new-output"></div>
+
+
+
+    <!--w3school-->
+    <h1>My First JavaScript</h1>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+
+<h2>javascript ne yapabilir</h2>
+<button onclick="document.getElementById('myİmage').src='pic_bulbon.gif'">turn on the light</button>
+<img id="myİmage"src="pic_bulboff.gif"style="width:100px;">
+<button onclick="document.getElementById('myİmage').src='pic_bulboff.gif'">turn off the light</button>
+
+<h1 id="mesaj"></h1>
+
+
+
+
+<button onclick = "togglelight ()">aç \ kapa</button>
+<p id = "status"></p>
+
+
+<p id = "demo"></p>
+
+<input type="password" id = "password" placeholder="şifre girin">
+<button onclick="checkpassword()">giriş yap</button>
+<p id="result"></p>
+
+<p id="doorstatus"></p>
+<button onclick="toggleDoor()">Kapıyı Aç \ Kapat</button>
+
+<p id="döngü"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+let islighton = false;
+function togglelight (){
+    islighton = !islighton;
+
+    if (islighton){
+        document.getElementById("status").innerHTML = "Ampul Yanıyor.";
+         }
+        else {
+            document.getElementById("status").innerHTML = "Ampul Kapalı";
+
+        }
+   
+}
+
+
+let text = "";
+let i = 1 ;
+
+while (i < 10){
+    text += i;
+    i++;
+}
+
+document.getElementById("demo").innerHTML = text;
+
+
+
+function checkpassword(){
+    let correctpassword = "1234";
+    let enteredpassword = document.getElementById("password").value ;
+
+    let iscorret = (enteredpassword === correctpassword);
+    if (iscorret){
+        document.getElementById("result").innerHTML = "şifre doğru ,hoşgeldiniz.";
+    }
+    else {
+        document.getElementById("result").innerHTML = "hatalı şifre";
+    }
+
+}
+
+let isDooropen = false ;
+function toggleDoor(){
+    isDooropen = !isDooropen;
+    if (isDooropen){
+        document.getElementById("doorstatus").innerHTML = "KAPI AÇIK.";
+    }
+    else{
+        document.getElementById("doorstatus").innerHTML = "KAPI KAPALI";
+    }
+}
+let text1 = "";
+for( let x = 0; x < 10; x++){
+    if( x === 3){break;}
+    text1 += "the number is" + x + "<br>";
+}
+document.getElementById("döngü").innerHTML = text1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
